@@ -1,0 +1,816 @@
+---
+title: "Beyond Regression - What's Next?"
+author: "Kamarul Ariffin Mansor"
+# date: "25 June 2022"
+logo: images/logo.jpg
+format:
+  revealjs:
+    code-fold: false
+    theme: simple
+    slide-number: true
+    footer: "Overview of SPSS Process Macro"
+    chalkboard: true
+    # smaller: true
+    scrollable: true
+bibliography: penguins.bib
+link-citations: yes
+csl: apa-single-spaced.csl
+resources:
+  - workshop-2022-06-25.pdf
+---
+
+<style>
+    .reveal section p {
+    display: inline-block;
+    font-size: 0.6em;
+    line-height: 1.2em;
+    vertical-align: top;
+  }
+</style>
+
+## What is a Process Macro?  
+
+. . .  
+
+PROCESS is an observed variable OLS and logistic regression path analysis modeling tool.  
+
+. . .  
+
+The PROCESS macro is developed by Andrew F. Hayes.  
+
+. . .  
+
+It is widely used through the social, business, and health sciences for estimating direct and indirect effects in single and multiple mediator models (parallel and serial), two and three way interactions in moderation models along with simple slopes and regions of significance for probing interactions, and conditional indirect effects in moderated mediation models with a single or multiple mediators or moderators.
+
+##  {.unnumbered}
+
+::: columns
+
+::: {.column width="55%"}
+**What is "Conditional Process Analysis?"**\
+Conditional process analysis is a modeling strategy undertaken with the goal of
+
+::: callout
+describing the *conditional* or *contingent* nature of the *mechanism(s)* by which a variable transmit its effect on another, and testing hypotheses about such contingent effects.
+:::
+
+**A melding of two ideas conceptually and analytically:**
+
+- "**Process aanalysis**", used to quantify and examine the direct and indirect pathways through which an antecedent variable *X* and transmits its effect on a consequent variable *Y* through an intermediary *M*. Beeter known as `mediation analysis` these days.
+
+- "**Moderation analysis**" used to examine how the effect of an antecedent *X* on a consequent *Y* depends on a third moderator variable *M* (`interaction`).
+:::
+
+::: {.column width="10%"}
+
+:::
+
+::: {.column width="35%"}
+![](images/figure1.1-pm-removebg.png)
+![](images/figure1.2-pm-removebg.png)
+![](images/figure1.3-pm-removebg.png)
+:::
+
+:::
+
+## Installation  
+
+::: {.columns}
+
+::: {.column width="60%"}  
+::: {.fragment .fade-up}  
+Go to process macro website to download the package [Download Process Macro](https://www.processmacro.org/download.html)  
+:::  
+
+::: {.fragment .fade-up}  
+Extract the Process Macro .zip file downloaded.  
+:::  
+
+::: {.fragment .fade-up}  
+in SPSS, go to `Extension` - `Utilities` - `Install Custom Dialog` (Compatibility Mode)  
+:::  
+
+::: {.fragment .fade-up}  
+In dialog box File name, locate your `process.spd` file, then click Open  
+:::  
+
+::: {.fragment .fade-up}  
+Your Process Macro can be found under the tab Analyze - Regression  
+:::  
+:::  
+
+::: {.column width="40%"}  
+::: {.fragment .fade-up}
+![](images/spss-pm-1.png)  
+:::
+:::
+:::
+
+## SPSS Hayes Process Macro vs SPSS AMOS SEM\
+
+::: {.columns}
+
+::: {.column width="45%"}
+### PROCESS MACRO\
+
+::: callout
+**PROS**\
+- No extra software... macro in SPSS, SAS, R\
+- Ease of use... preset models\
+- Multicategorical Dummy Coding\
+- Probing Interaction & Johnson-Neyman points\
+- Can run analysis with relatively small samples\
+:::
+
+::: callout
+**CONS**\
+- Only one `DV` in model testing\
+- Uses composite variables - no measurement error or model fit\
+- Only one `IV` in moderation testing\
+- No reciprocal causation model testing\
+- Missing data\
+:::
+:::
+
+::: {.column width="10%"}
+<!-- this is a blank column -->
+:::
+
+::: {.column width="45%"}
+### AMOS SEM\
+
+::: callout
+**PROS**\
+- Assess measurement properties of contructs in structural testing\
+- Not limited in model building\
+- Better at capturing collective effect than individual relationships\
+- Modification indices\
+:::
+
+::: callout
+**CONS**\
+- Extra software\
+- Relatively large sample size required\
+- Data prep before SEM analysis\
+- Model building is time consuming\
+:::
+:::
+
+:::
+
+## Moderation vs Mediation Analysis\
+
+**Moderator Variable**\
+
+A moderator specifies the `conditions under which a given effect occurs`, as well as the conditions under which the `direction (nature)` or `strength` of an effect vary.\
+  
+Baron and Kenny (1986, pp. 1174, 1178) describe a moderator variable as the following:\
+  
+::: callout
+A **qualitative** (e.g., sex, race, class) or **quantitative** variable ... that affects the direction and/or strength of a relation between an independent or predictor variable and a dependent or criterion variable ... a basic moderator effect can be presented as an interaction between a focal independent variable and a factor (the moderator) that specifies the appropriate conditions for its operation.\
+:::
+
+::: callout
+Moderator variables are typically introduced when there is an **unexpectedly weak or inconsistent relation between a predictor and a criterion variable**.
+:::
+
+## \
+
+**Moderator Variable (cont.)**\
+
+A `moderator` variable is one that `affects the relationship between two variables`, so that the nature of the impact of the predictor on the criterion varies according to the level or value of the moderator **(Holmbeck, 1997)**\
+
+A moderator `interacts with the predictor` variable in such a way as to have an impact on the level of the dependent\
+
+<!-- ## \ -->
+
+<!-- **Issues in Moderation**\ -->
+
+<!-- ::: callout -->
+<!-- 1. Lack of Attention to Measurement Measurement Error\ -->
+<!-- 2. Variable Distributions Are Assumed to Include the Full Range of Possible Values\ -->
+<!-- 3. Unequal Sample Size Across Moderator-Based Categories\ -->
+<!-- 4. Insufficient Statistical Power\ -->
+<!-- 5. Artificial Dichotomization of Continuous Moderators\ -->
+<!-- 6. Presumed Effects of Correlations Between Product Term and Its Components\ -->
+<!-- 7. Interpreting First-Order Effects Based on Models Excluding Product Terms -->
+<!-- variable.\ -->
+<!-- ::: -->
+
+## \
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+**How to write Hypothesis?**\
+
+::: {.fragment .fade-up}  
+::: callout-tip
+H1: The `positive` relationship between satisfaction and loyalty will be `stronger when perceived image is high`.\
+:::  
+:::  
+
+::: {.fragment .fade-up}  
+::: callout-tip
+H2: The `positive` relationship between satisfaction and loyalty would be `stronger for male compared to female`.\
+:::  
+:::  
+
+::: {.fragment .fade-up}  
+::: callout-tip
+H3: Body Mass Index (BMI) `moderates` the relationship between exercise and weight loss, such that for those with a `low BMI, the effect is negative` (i.e., you gain weight - muscle mass), and for those with a `high BMI, the effect is positive` (i.e., exercising leads to weight loss)\
+:::  
+:::  
+
+:::
+
+::: {.column width="50%"}  
+**Suggested Readings**  
+
+::: callout
+Hayes, A.F., & Cai, L. (2007). Using heteroskedasticity-consistent standard error estimators in OLS regression: An introduction and software implementation. Behavior Research Methods, 39, 709-722.  
+
+Hayes, A.F. (2022). Introduction to mediation, moderation, and conditional process analysis: A regression-based approach. New York: The Guilford Press.  
+
+Field, A. (2018). Discovering statistics using IBM SPSS statistics (5th ed). Los Angeles: Sage.  
+
+Jose, P.E. (2013). Doing statistical mediation and moderation. New York: The Guilford Press.  
+:::
+
+:::
+
+:::
+
+## Module 1  
+
+Model 1a - One Moderator (Basic Moderation) - Continuous Moderator  
+
+## Introduction  
+
+. . .  
+
+Example Variables: 1 predictor *X*, 1 moderator *W*, 1 outcome *Y*  
+
+. . .  
+
+::: callout-Preliminary-Notes:  
+Model 1 assumes that:  
+1. The primary IV (variable *X*) is continuous or dichotomous.  
+2. Any moderators (variables *W, V, Q, Z*) are continuous, though the dichotomous moderators can be handled.  
+:::  
+
+. . .
+    
+::: {.columns}  
+::: {.column width="50%"}  
+![](images/figure_model1a_1.png)  
+:::  
+
+::: {.column width="50%"}  
+![](images/figure_model1a_2.png)  
+:::  
+:::
+
+## How to run in SPSS Process Macro? {.smaller}  
+
+Model Framework.  
+
+::: {.columns}  
+::: {.column width="50%"}  
+![](images/figure_model1a_1.png)  
+:::  
+
+::: {.column width="50%"}  
+![](images/figure_model1a_2.png)  
+:::  
+:::  
+
+Analyze > Regression > PROCESS v4.0 by Andrew F. Hayes  
+![](images/spss-pm-1.png)  
+Insert variables (*Y*, *X*, and *W*) and choose `Model 1`  
+![](images/model1a_1.png)  
+Click Options button:  
+- check on `Generate code for visualizing interactions`  
+- Mean center - choose `Only continuous variables that define products`.  
+- Conditioning values - choose `-1SD, Mean, +1SD`  
+- check on `Johnson-Newman output`  
+- click `Continue`  
+
+![](images/model1a_1_options.png)  
+
+click `OK` to run analysis  
+
+## Reading the output  
+
+Description of Model along with the different variables where *Y* is Dependent Variable, *X* is Independent Variable, and *W* is the Moderating Variable.  
+![](images/model1a_1_out1.png)  
+
+- Model Summary, provides summary of the model with $R$, $R^2$, $F$ statistic, and $p$ value for the overall model.  
+![](images/model1a_1_out2.png)  
+
+- Next, is the coefficients, with impact of DV (Hope),IV (Negative Life Events), and the interaction effect to assess if there is moderation (Grit) or not.  
+![](images/model1a_1_out3.png)  
+
+In this example, since the interaction effect is significant, `Grit` moderates the relationship between `Negative Life Events` and `Hope`.  
+
+Test of unconditional interaction, this shows the change in $R^2$ due to interaction $(X*W)$, this is also significant.  
+![](images/model1a_1_out4.png)  
+
+## Johnson-Newman intervals and simple slope analysis  
+
+Johnson-Newman intervals tells you the range of values of the moderator in which the slope of the predictor is significant vs. nonsignificant at a specified alpha level.  
+
+In simple terms Johnson-Newman identifies regions in the range of the moderators variable where the effect of the focal predictor on the outcome is statistically significant and non significant.  
+![](images/model1a_1_out5_jn.png)  
+
+## Data Visualization  
+
+There are two ways to draw the interaction path in order to give you a clearer visualization on the effects of moderator on the relationship between the predictor and the outcome variable.  
+![](images/model1a_1_out6_dataviz.png)  
+Using the SPSS syntax  
+- copy the script from the process macro output.  
+- in SPSS, open a new syntax file  
+- paste the script into your syntax file  
+- click `Run` button to create your interaction graph  
+
+::: {.columns}  
+::: {.column width="50%"}  
+![](images/model1a_1_out6_dataviz_syntax.png)  
+:::  
+
+::: {.column width="50%"}
+![](images/model1a_1_out6_dataviz_graph.png)  
+:::
+:::  
+
+Using the StatsTool package created by James Gaskin  
+- link to download the StatTools Package -> [Download StatTools](http://statwiki.gaskination.com/index.php?title=Main_Page)  
+
+
+## Reporting Results  
+
+1. The study assessed the moderating role of `Grit` on the relationship between `Negative Life Events` and `Hope`. The results revealed a positive and significant moderating impact of `Grit` on the relationship between `Negative Life Events` and `Hpoe` (b = 2.6055, t = 2.4792, p = .0136), supporting H1. Moderation analysis summary is presented in Table 1.  
+
+2. Results of simple slope analysis conducted to better understand the nature of the moderating effects are shown in Figure 1. As can be seen in Figure 1, the line is much steeper for Low RA. This shows that at Low `Grit`, the impact of `NLE` on `Hope` is much stronger in comparison to High `Grit`. As shown in Figure 2, as the level of `Grit` increased, the strength of the relationship between `NLE` and `Hope` decreased. This is due to the negative slope coefficient obtained.  
+
+## Module 2  
+
+Model 1  
+Basic Moderation  
+1 Categorical Moderator (Binary)    
+
+## Introduction  
+
+Example Variable: 1 predictor *X*,, 1 moderator *W*, 1 outcome *Y*  
+
+**Preliminary Notes**  
+Model 1 assumes that:  
+- The primary IV (variable *X*) is continuous  
+- The moderator is categorical with two categories (binary)  
+- Dataset: `categorical_moderation_example.sav`  
+
+::: {.columns}  
+::: {.column width="50%"}  
+![](images/figure_model1b_1.png)  
+:::  
+
+::: {.column width="50%"}  
+![](images/figure_model1b_2.png)  
+:::  
+:::  
+
+## Problem Hypothesis  
+
+The basic relationship under investigation is the association between social support (X) and depression (Y), and let us assume that this is significant and negative. Specifically, someone who experiences a high level of social support should also report being less depressed.  
+
+The ModV (W) is introduced because we are interested in whether gender might affect this
+basic relationship.  
+
+For the moderation hypothesis, someone might envision one of two possibilities:  
+
+(1) that the association between social support and depression will be greater for males because they report lower levels of both variables than females; that is, the association is more salient, or  
+
+(2) someone might hypothesize that the association will be greater for females because
+they are more attuned to the emotional landscape of the psyche.  
+
+My view was that the former prediction was more likely to be obtained than the latter, so I sought to examine a data set to determine which of these possible outcomes would be supported. The proposed moderation, if it exists, should be evident in the interaction term (XW) predicting the outcome (Y).  
+
+## How to run in SPSS Process Macro?  
+
+::: {.columns}  
+::: {.column width="50%"}  
+Analyze > Regression > PROCESS v4.0 by Andrew F. Hayes  
+
+Insert variables (*Y*, *X*, and *W*) and choose `Model 1`  
+
+Click Options button:  
+- check on `Generate code for visualizing interactions`  
+- Mean center - choose `No centering`.  
+- click `Continue`  
+
+click `OK` to run analysis  
+:::  
+
+::: {.column width="50%"}  
+![](images/model1a_2_options.png)  
+:::  
+:::  
+
+## Reading the results  
+
+::: {.columns}  
+::: {.column width="50%"}  
+
+::: {.fragment .fade-up}  
+It was predicted that males would evidence a stronger negative relationship between social support and depression than females because males' use of social support is less common and may be more salient.  
+:::  
+
+::: {.fragment .fade-up}  
+A regression analysis was performed to test this moderation hypothesis: Social support was the independent variable, gender was the moderating variable, and depression was the dependent variable.  
+:::  
+
+::: {.fragment .fade-up}  
+The social support variable was multiplied with the dummy-coded gender variable, and the two main effects and the interaction term were used in a hierarchical regression to predict depression.  
+:::
+
+::: {.fragment .fade-up}  
+A significant main effect for gender was obtained (b = .92, p = .007), and it signified that females' depression levels, on average, were higher than males' depression levels.  
+:::  
+
+::: {.fragment .fade-up}  
+But this main effect was qualified by the significant interaction (b = -.82, p = .009),
+which was graphed using the techniques recommended by Aiken and West (1991; see Figure).  
+![](images/model1b_graph.png)  
+:::  
+
+::: {.fragment .fade-up}  
+The figure shows that females manifested a steeper slope between social support and depression than males.  
+:::
+
+::: {.fragment .fade-up}  
+Simple slope analyses yielded the result that females manifested a significant negative slope, -0.60, p < .001, whereas males evidenced a nonsignificant slope, -0.09, p = .60.  
+:::
+
+::: {.fragment .fade-up}  
+This result suggests that females' differential use of social support was significantly related to levels of depression, whereas no such association was noted for males.  
+:::  
+
+::: {.fragment .fade-up}  
+Further, the largest difference in self-reported depression between the genders occurred under conditions of low social support, whereas males' and females' levels of depression were virtually identical under conditions of high social support.  
+:::  
+:::  
+
+::: {.column width="50%"}
+![](images/model1b_full_output.png)  
+:::  
+:::  
+
+
+<!-- ## Module 3   -->
+
+<!-- Model 1b - 1 Moderator with Categorical Moderator   -->
+
+<!-- Access the data set titled "categorical moderation problem#8.sav" and conduct a categorical moderation in which the moderator is composed of more than two groups. In this case, ethnic group is the moderator variable, and it is composed of three groups. Create dummy-coded variables (with European New Zealand as the reference group), create the interaction terms, and run a single moderation analysis. If both interaction terms are significant, run two separate follow-up analyses, and graph any significant interactions. Report any simple slope analyses that you run.   -->
+
+<!-- ## Introduction   -->
+
+<!-- - Example Variables: 1 predictor *X*, 1 moderator *W*, 1 outcome *Y*   -->
+
+<!-- - *Preliminary Notes*   -->
+<!--   - Model 1b assumes that:   -->
+<!--     - The primary IV (variable *X*) is continuous   -->
+<!--     - The moderator is categorical with multiple categories   -->
+
+
+
+<!-- ## How to run in SPSS Process Macro?   -->
+
+<!-- 1. Insert model framework image here.   -->
+
+<!-- 2. Analyze > Regression > PROCESS v4.0 by Andrew fF. Hayes   -->
+<!--     Insert image here...   -->
+
+<!-- 3. Insert variables (*Y*, *X*, and *W*) and choose `Model 1`   -->
+<!--     Insert image here...   -->
+
+<!-- 4. Click Options button:   -->
+<!--     - check on `Generate code for visualizing interactions`   -->
+<!--     - Mean center - choose `Only continuous variables that define product`.   -->
+<!--     - click `Continue` -->
+
+<!-- 5. Click `Multicategorical` button:   -->
+<!--     - Under Variable W   -->
+<!--         - check box   -->
+<!--         - Coding system: `Indicator` (this will create a dummy coding for the moderator variable) -->
+<!--     - click `Continue` -->
+<!--     insert image here ...   -->
+
+<!-- 5. click `OK` to run analysis   -->
+
+<!-- ## Reading the output   -->
+
+<!-- **Insert First Output Image Here**   -->
+
+<!-- ● Description of Model along with the different variables where *Y* is Dependent Variable, *X* is Independent Variable, and *W* is the Moderating Variable.   -->
+
+<!-- ● Bank is Categorical with Small, Medium, and Large Sized Banks.   -->
+
+<!-- ● Coding of categorical *W* variable for analysis:   -->
+
+<!-- ``` -->
+<!-- To Learn About Dummy Coding -->
+
+<!--     | Bank   | W1  | W2  |   -->
+<!--     |:------:|:---:|:---:|   -->
+<!--     | 1.000  | .000| .000|   -->
+<!--     | 2.000  |1.000| .000|   -->
+<!--     | 3.000  | .000|1.000|   -->
+
+<!--   W1 - Medium vs Small (Small is the Reference Category)   -->
+<!--   W2 - Large vs Small   -->
+<!-- ``` -->
+
+<!-- **Insert Second Image Output Here**   -->
+
+<!-- :sparkles: Model Summary, provides summary of the model with $R$, $R^2$, $F$ statistic, and $p$ value for the overall model. Next, is the coefficients, with impact of *Commitment*, *Bank Size*, and the interaction effects to assess if there is moderation or not.   -->
+
+<!-- :sparkles: Differences in *OP* between Medium and Small banks is insignificant (W1, *p* > 0.05). Medium sized banks have a higher *OP* in comparison to small sized banks.   -->
+
+<!-- :sparkles: Differences in *OP* between Large and Small banks is significant (W2, $p$ < 0.05). Large sized banks has a lower *OP* in comparison to small sized banks.   -->
+
+<!-- ``` -->
+<!-- Can verify that the effect whether higher or lower in *OP* through the mean comparison. This can be done easily using SPSS:   -->
+<!-- Go to Analyze > Compare Means > Means   -->
+<!-- Dependent: *OP*   -->
+<!-- Independent: *Bank*   -->
+<!-- Click `OK`   -->
+<!-- ``` -->
+
+<!-- :sparkles: In this example, one interaction effect (Int_1) is significant. Impact of Commitment on Performance in Medium Sized Banks is considerably different (lower) from Small Sized Banks.   -->
+
+<!-- :sparkles: However, impact of Commitment on Performance in Large Sized Banks is not significantly different from Small Sized Banks.   -->
+
+<!-- :sparkles: Test of unconditional interaction. This shows the change in $R^2$ due to interaction _(x*w)_, this is also significant.   -->
+
+<!-- :sparkles: Next, the conditional effects show that for Small and Large Sized Banks, the effects of Commitment on Organzational Performance is significant.   -->
+
+<!-- ## Data Visualization {.smaller}   -->
+
+<!-- There are two ways to draw the interaction path in order to give you a clearer visulization on the effects of moderator on the relationship between the predictor and the outcome variable.   -->
+
+<!-- ::: {.columns} -->
+
+<!-- ::: {.column width="50%"} -->
+<!-- 1. Using the SPSS syntax   -->
+<!--     ✓ copy the script from the process macro output.   -->
+<!--     ✓ in SPSS, open a new syntax file   -->
+<!--     ✓ paste the script into your syntax file   -->
+<!--     ✓ click `Run` button to create your interaction graph   -->
+<!--     ...insert image here.   -->
+<!-- ::: -->
+
+<!-- ::: {.column width="50%"} -->
+<!-- 2. Using the StatsTool package created by James Gaskin   -->
+<!--     ✓ link to download the STatTools Package -> []()   -->
+<!-- ::: -->
+
+<!-- ::: -->
+
+<!-- **_Interpretation_**   -->
+
+<!-- ::: callout   -->
+<!-- 1. The study assessed the moderating role of Bank Size on the relationship between Commitment and Organizational Performance (OP). Test of unconditional interaction shows the change in $R^2$ due to interaction (x*w) is significant. The result revealed that although Medium Sized Banks have a higher OP in comparison to Small Size Banks. Differences in OP between Medium and Small bank were insignificant (W1, $p$ > 0.05)    -->
+<!-- :::   -->
+
+<!-- ::: callout   -->
+<!-- 2. Furthermore, large sized banks have a lower *OP* in comparison to small size banks. Differences in *OP* between Large and Small banks were significant (W2, *p* < 0.05). In this example, one interaction effect (Int_1) is significant, such that, impact of Commitment on Performance in Medium sized banks is considerably different (lower) from Small sized banks. However, impact of Commitment on Performance in Large sized banks is not significantly different from Small sized banks.   -->
+<!-- :::   -->
+
+<!-- ## Module 3   -->
+
+<!-- Model 2 - Two Moderator Variables   -->
+
+<!-- ## Introduction   -->
+
+<!-- **Moderators $W$ and $Z$**   -->
+
+<!-- - Example Variables: 1 predictor *X*, 2 Moderators *W* & *Z*, 1 outcome *Y*   -->
+<!-- - The primary IV (variable *X*) is continuous   -->
+<!-- - The moderators are continuous   -->
+
+<!-- ```   -->
+<!-- IV: Commitment   -->
+<!-- MoDV1: Role Ambiguity   -->
+<!-- MoDV2: Role Conflict   -->
+<!-- DV: OP -->
+<!-- ```   -->
+
+<!-- ## How to run in SPSS Process Macro? {.smaller}   -->
+
+<!-- 1. Insert model framework image here.   -->
+
+<!-- 2. Analyze > Regression > PROCESS v4.0 by Andrew fF. Hayes   -->
+<!--     Insert image here...   -->
+
+<!-- 3. Insert variables (*Y*, *X*, *W*, and *Z*) and choose `Model 2`   -->
+<!--     Insert image here...   -->
+
+<!-- 4. Click Options button:   -->
+<!--     - check on `Generate code for visualizing interactions`   -->
+<!--     - Mean center - choose `Only continuous variables that define product`.   -->
+<!--     - Conditioning values - choose `-1SD, Mean, +1SD`   -->
+<!--     - click `Continue` -->
+<!--     insert image here ...   -->
+
+<!-- 5. click `OK` to run analysis   -->
+
+<!-- ## Reading the output   -->
+
+<!-- - Model Summary, provides summary of model with *R*, $R^2$, $F$ statistic, and $p$ value for the overall model. Next, is the coefficients, with impact of Commitment, Role Ambiguity, Role Conflict, and the interaction effects to assess if there is moderation or not.   -->
+
+<!-- - Culture has a significant impact on *OP*.   -->
+
+<!-- - *RA* and its interaction with Culture (int_1) has a significant impact on *OP*. This shows that *RA* moderates the relationship between Culture and *OP*.   -->
+
+<!-- - *RC* and its interaction with Culture (int_2) had an insignificant impact on *OP*. This shows that *RC* doesn't moderate the relationship between Culture and *OP*.   -->
+
+<!-- Insert Second Output Image Here...   -->
+
+<!-- - Test of unconditional interaction, this shows the change in $R^2$ due to interaction (X*W), this is significant.   -->
+
+<!-- - Test of unconditional interaction, this shows the change in $R^2$ due to interaction (X*Z), this is significant.   -->
+
+<!-- - Next, the conditional effects of the focal predictor at values of the moderator.   -->
+
+## Module 4  
+
+Model 4 - Mediation  
+
+## Introduction
+
+Up to this point, we have focused on how to perform moderation analysis using the Process Macro.  
+
+Let's now examine how the influence between two constructs may take an indirect path through a third variable called a **mediator**.  
+
+In this situation, the third variable will intervene on the influence of the two constructs.  
+
+In testing if "mediation" or the presence of a mediator in a model, you need to understand some of the terminology that is used, such as **direct effect, indirect effect,** and **total effect".  
+
+## Review  
+
+::: {.columns}  
+::: {.column width="30%"}  
+![](total-effect.png)  
+:::  
+
+::: {.column width="70%"}  
+::: {.fragment .fade-up}  
+**Total Effect**  
+
+`c` in the relationship between X and Y is the `total effect`.  
+:::  
+:::
+:::  
+::: {.columns}  
+::: {.column width="30%"}  
+![](indirect-effect.png)  
+:::  
+::: {.column width="70%"}  
+::: {.fragment .fade-up}  
+**Direct-Indirect-Effect**  
+A `direct effect` is simply a direct relationship between an independent variable and a dependent variable in presence of the Mediator (`c'`).  
+:::  
+::: {.fragment .fade-up}  
+An `indirect effect` is the relationship that flows from an independent variable to a mediator and then to a dependent variable (`a*b`).  
+:::  
+::: {.fragment .fade-up}  
+The term `total effect` is the combined influence of the direct effect between two constructs and the indirect effect flowing through the mediator (`c = c' + a*b`).  
+:::
+:::  
+:::
+
+## How to Test Mediation?  
+
+For our examples, we will be using a dataset containing continuous measures of student achievement, performance goals, mastery goals, interest, and anxiety. We also have a dummy coded variable reflecting gender identification (coded 0=identified male, 1=identified female).
+
+Dataset: `mediation_example_data.sav`  
+![](images/mediation_data_head.png)  
+
+::: {.columns}  
+
+::: {.column width="60%"}  
+![](images/figure_model4.png)  
+:::  
+
+::: {.column width="40%"}  
+Mediation Model Framework
+
+We are testing whether the effect of mastery goals on student achievement is mediated by interest. This is an example of a simple mediation model.  
+:::  
+
+:::  
+
+## How to run in SPSS Process Macro?  
+
+Analyze > Regression > PROCESS v4.0 by Andrew F. Hayes  
+
+Insert variables (*Y*, *X*, and *M*) and choose `Model 4`  
+![](images/model4_enter_variable.png)  
+Click Options button:   
+- select `Show total effects ...` and `Standardized Effects ...`  
+- click `Continue`  
+![](images/model4_options.png)  
+click `OK` to run analysis  
+
+## Reading the Output  
+
+::: {.columns}  
+::: {.column width="50%"}  
+Description of Model along with the different variables where Y is the Dependent Variable, X is the Independent Variable, and M is the Mediating Variable.  
+
+Notice that for this example there are two Model Summary presented.  
+Model Summary, provides summary of the model with R, , F statistic, and value for the overall model.  
+
+`mastery` -> `interest` (Model Summary 1 - path `a`)
+
+> We see that in the first (simple) regression, mastery goals is a significant (positive) predictor of interest (b=.7701, s.e.=.0858, p<.001). This coefficient reflects the direct effect of mastery on interest within the path model. [Notice that the standardized path coefficient is also provided, which is .6073.]  
+
+`[mastery & interest]` -> `achieve` (Model Summary 2 - path `b` and `c'`)  
+
+> We see that in the second regression, both mastery goals (b=.3613, s.e.=.0768, p<.001) and interest (b=.2106, s.e.=.0606, p=.0007) are significant, positive predictors of achievement. These coefficients reflect the direct effects of both interest (path `b`) and mastery goals (path `c'`) on achievement within the path model. 
+[The standardized path coefficients for this portion of the model are .3967 and .2932 for mastery and interest, respectively.]  
+
+`mastery` -> `achieve` (Model Summary 3 - path `c`)  
+
+> We see that mastery goals is significant positive predictor of achievement (b=.5235, s.e.=.0634, p<.0001). Here, the output provide the total effect (path c) of IV to DV without the presence of the mediator. [The standardized path coefficient is .5748]  
+
+::: callout-important  
+The unstandardized indirect effect (.1622) of interest is calculated as the product of paths a (.7701) and b (.2106) from the previous regression models.  
+
+This indirect effect is tested using bootstrap standard errors and confidence intervals.  
+
+The null hypothesis is that the population indirect effect is zero, whereas the alternative is that the population indirect effect is non-zero. So if zero falls between the lower and upper bound of the confidence interval (again, the default is 95%), then you maintain the null. If zero falls outside of the interval, then you reject the null.  
+
+Here, we reject the null.  
+
+The total effect of X on Y, computed as DE + IE = .3613 + .1622 = .5325. Because zero (the null) does not fall between the lower and upper bound of the 95% confidence interval, we infer that total effect of mastery goals on achievement is significantly different from zero.  
+
+The c_cs is the completely standardized total effect. It is computed as c_ps * Sx, where Sx is the standard deviation for X (in this case, mastery goals).   
+
+The standard deviation for the X (mastery) variable is 1.399233. So, the completely standardized total effect is: .4108* 1.399233 = .5748.  
+
+The c'_cs is the completely standardized direct effect. It is computed as c'_ps * Sx, where Sx is the standard deviation for X. The completely standardized direct effect is: .2835* 1.399233 = .3967.  
+
+The partially standardized indirect effect is computed the unstandardized indirect effect divided by the standard deviation for Y: i.e., ab/ Sy. The standard deviation for Y is (again) 1.274432. As such, the partially standardized indirect effect is: .1622/ 1.274432 = .127.  
+
+The standardized indirect effect is computed as the product of the standardized paths 'a' and 'b': IE=.6073*.2932=.178. We see this effect is significant, as 0 does not fall between the lower and upper bound of the confidence interval. [Note: This effect is also computed by multiplying the partially standardized indirect effect by the standard deviation for X.] 
+
+
+For more details, see Hayes (2018, p. 134-135).  
+:::  
+
+:::  
+
+::: {.column width="50%"}  
+![](images/model4_out1.png)  
+**Model Summary 1**  
+![](images/model4_out2.png)  
+
+**Model Summary 2**  
+![](images/model4_out3.png)  
+**Model Summary 3**  
+![](images/model4_out4.png)  
+**TOTAL, DIRECT, AND INDIRECT EFFECTS OF X ON Y**  
+![](images/model4_out5.png)  
+:::  
+:::  
+
+## References  
+
+Baron, R.M., Kenny, D.A. (1986). The mediator-moderator distinction in social psychological research: Conceptual, strategic, and statistical considerations. Journal of Personality and Social Psychology, 51, 1173-1182. [Downloaded June 24 from https://www.sesp.org/files/The%20Moderator-Baron.pdf]    
+
+Hayes, A.F. (2022). Introduction to mediation, moderation, and conditional process analysis: A regression-based approach. New York: The Guilford Press.  
+
+## Thank You  
+
+::: {.columns}  
+::: {.column width="30%"}  
+![](images/profile.png)  
+:::  
+
+::: {.column width="70%"}  
+### Kamarul Ariffin Mansor  
+**Department of Mathematical Sciences**  
+**Faculty of Computer and Mathematical Sciences**  
+**UiTM Kedah**  
+
+**eMail: ariff118@uitm.edu.my**  
+**mobile: +60 12 433 6901**  
+**website: [https://ariff118.github.io/kamansor.github.io](https://ariff118.github.io/kamansor.github.io)**  
+:::  
+:::
+
+
+
+
