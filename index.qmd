@@ -242,6 +242,34 @@ Jose, P.E. (2013). Doing statistical mediation and moderation. New York: The Gui
 
 :::
 
+## What is Mediation in Research?  
+
+::: {.fragment .fade-up}  
+::: {.fragment .highlight-red}  
+**Definition**: A mediation variable explains the “*why*” and “*how*” relationship between the independent variable (X) and the dependent variable (Y). In other words, **_mediation contextualizes the reason for the effect_**.  
+:::  
+:::  
+
+::: {.fragment .fade-up}
+In mediation analysis, the independent variable does not infer directly the dependent variable but rather through a third variable mediator or “**_middleman_**” between the two. In other words, if we remove the mediator variable, the causal effect between X and Y variables will cease to exist.  
+:::  
+
+::: {.fragment .fade-up}  
+A mediated model consists of two paths respectively the **direct effect** path (path A) between X and Y and the **indirect effect** path (path B and C) respectively from X → Me → Y as seen in the following figure.  
+:::  
+
+::: {.fragment .fade-up}  
+::: {.columns}  
+::: {.column width="50%"}  
+![](images/model4_concept.png)  
+:::  
+
+::: {.column width="50%"}  
+![](images/model4_stats.png)  
+:::  
+:::  
+:::  
+
 ## Module 1  
 
 Model 1a - One Moderator (Basic Moderation) - Continuous Moderator  
@@ -259,6 +287,7 @@ Model 1 assumes that:
 1. The primary IV (variable *X*) is continuous or dichotomous.  
 2. Any moderators (variables *W, V, Q, Z*) are continuous, though the dichotomous moderators can be handled.  
 :::  
+Dataset: `Jose_2013_data.sav`  
 
 . . .
     
