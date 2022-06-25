@@ -160,12 +160,33 @@ Your Process Macro can be found under the tab Analyze - Regression
 
 ## Moderation vs Mediation Analysis\
 
-**Moderator Variable**\
+Key differences from a deterministic point of view:  
 
+::: {.fragment .fade-in}  
+A mediator is **_the reason for the effect_** and acts like a “`middleman`” in the relationship between independent and dependent variables. If the mediator variable is removed, the causal link between independent and dependent variables disappears.
+:::  
+
+::: {.fragment .fade-in}  
+A mediator variable **MUST** be a causal result of the independent variable and a causal precursor of the dependent variable. In other words, **_a mediator contextualizes the effect_**.
+:::  
+
+::: {.fragment .fade-in}  
+A moderator variable `changes` the effect (`level of strength`, `direction`) between the independent and dependent variables. 
+:::  
+
+::: {.fragment .fade-in}  
+A moderator variable **MUST NOT** be the causal effect of the independent variable.
+:::  
+
+## Moderating Variable  
+
+::: {.fragment .fade-in}  
 A moderator specifies the `conditions under which a given effect occurs`, as well as the conditions under which the `direction (nature)` or `strength` of an effect vary.\
-  
+:::  
+
+::: {.fragment .fade-in}  
 Baron and Kenny (1986, pp. 1174, 1178) describe a moderator variable as the following:\
-  
+
 ::: callout
 A **qualitative** (e.g., sex, race, class) or **quantitative** variable ... that affects the direction and/or strength of a relation between an independent or predictor variable and a dependent or criterion variable ... a basic moderator effect can be presented as an interaction between a focal independent variable and a factor (the moderator) that specifies the appropriate conditions for its operation.\
 :::
@@ -173,14 +194,15 @@ A **qualitative** (e.g., sex, race, class) or **quantitative** variable ... that
 ::: callout
 Moderator variables are typically introduced when there is an **unexpectedly weak or inconsistent relation between a predictor and a criterion variable**.
 :::
-
-## \
-
-**Moderator Variable (cont.)**\
-
+:::  
+  
+::: {.fragment .fade-in}  
 A `moderator` variable is one that `affects the relationship between two variables`, so that the nature of the impact of the predictor on the criterion varies according to the level or value of the moderator **(Holmbeck, 1997)**\
-
+:::  
+  
+::: {.fragment .fade-in}  
 A moderator `interacts with the predictor` variable in such a way as to have an impact on the level of the dependent\
+:::  
 
 <!-- ## \ -->
 
@@ -196,6 +218,62 @@ A moderator `interacts with the predictor` variable in such a way as to have an 
 <!-- 7. Interpreting First-Order Effects Based on Models Excluding Product Terms -->
 <!-- variable.\ -->
 <!-- ::: -->
+
+## Various Interaction Pattern  
+
+::: {.fragment .fade-up}  
+::: {.columns}  
+::: {.column width="50%"}  
+**The Fan Effect**  
+“Catastrophizing functioned as an exacerbator for the positive relationship noted between reported stress intensity and reported depression. The highest level of depressive symptoms occurred in individuals who reported high stress intensity and high levels of catastrophizing.”  
+:::  
+
+::: {.column width="50%"}  
+![](images/fan_effect.png)  
+:::  
+:::  
+:::  
+
+::: {.fragment .fade-up}  
+::: {.columns}  
+::: {.column width="50%"}  
+**The Triangle Pattern**  
+“The process of savoring exacerbates the relationship between the experience of positive events and the outcome of happiness. An individual who savors very little does not show any significant relationship between positive events and happiness, but someone who savors a lot shows a strong positive relationship. The greatest happiness is reported by those participants who reported experiencing high levels of positive events and also reported savoring to a high degree.”  
+:::  
+
+::: {.column width="50%"}  
+![](images/triangle_effect.png)  
+:::  
+:::  
+:::  
+
+::: {.fragment .fade-up}  
+::: {.columns}  
+::: {.column width="50%"}  
+**The Funnel Pattern**  
+“Academic achievement by adolescents varies by degree of challenge in the academic environment moderated by the amount of parental warmth. The degree of academic challenge is unrelated to academic achievement under conditions of average parental warmth. In contrast, a positive relationship between academic challenge and academic achievement was noted under conditions of high parental warmth, but a negative relationship was noted under conditions of low parental warmth. The highest academic achievement scores were found for adolescents in high challenge environments who had warm parents, whereas the lowest academic achievement scores were obtained for adolescents in high challenge environments who had parents lacking in warmth.”
+:::  
+
+::: {.column width="50%"}  
+![](images/funnel_effect.png)  
+
+:::  
+:::  
+:::  
+
+::: {.fragment .fade-up}  
+::: {.columns}  
+::: {.column width="50%"}  
+**The Crossover Pattern (Butterfly)**  
+“No main effect for manipulated power nor a main effect for manipulated similarity were noted on ratings of liking, but a significant interaction was obtained. Under conditions of average manipulated similarity, no
+relationship was noted between manipulated power and liking. However, under conditions of high manipulated similarity, a positive relationship was found between manipulated power and liking. The opposite trend was seen under conditions of low manipulated similarity.”  
+:::  
+
+::: {.column width="50%"}  
+![](images/crossover_effect.png)  
+:::  
+:::  
+:::  
 
 ## \
 
@@ -379,9 +457,9 @@ Using the StatsTool package created by James Gaskin
 
 ## Reporting Results  
 
-1. The study assessed the moderating role of `Grit` on the relationship between `Negative Life Events` and `Hope`. The results revealed a positive and significant moderating impact of `Grit` on the relationship between `Negative Life Events` and `Hpoe` (b = 2.6055, t = 2.4792, p = .0136), supporting H1. Moderation analysis summary is presented in Table 1.  
+1. The study assessed the moderating role of `Grit` on the relationship between `Negative Life Events` and `Hope`. The results revealed a positive and significant moderating impact of `Grit` on the relationship between `Negative Life Events` and `Hope` (b = 2.6055, t = 2.4792, p = .0136), supporting H1. Moderation analysis summary is presented in Table 1.  
 
-2. Results of simple slope analysis conducted to better understand the nature of the moderating effects are shown in Figure 1. As can be seen in Figure 1, the line is much steeper for Low RA. This shows that at Low `Grit`, the impact of `NLE` on `Hope` is much stronger in comparison to High `Grit`. As shown in Figure 2, as the level of `Grit` increased, the strength of the relationship between `NLE` and `Hope` decreased. This is due to the negative slope coefficient obtained.  
+2. Results of simple slope analysis conducted to better understand the nature of the moderating effects are shown in Figure 1. As can be seen in Figure 1, the line is much steeper for Low `Grit`. This shows that at Low `Grit`, the impact of `NLE` on `Hope` is much stronger in comparison to High `Grit`. Also shown in the figure, as the level of `Grit` increased, the strength of the relationship between `NLE` and `Hope` increased. This is due to the positive slope coefficient obtained and the negative impact of `NLE` and `Hope`.  
 
 ## Module 2  
 
@@ -684,7 +762,7 @@ Let's now examine how the influence between two constructs may take an indirect 
 
 In this situation, the third variable will intervene on the influence of the two constructs.  
 
-In testing if "mediation" or the presence of a mediator in a model, you need to understand some of the terminology that is used, such as **direct effect, indirect effect,** and **total effect".  
+In testing if "mediation" or the presence of a mediator in a model, you need to understand some of the terminology that is used, such as **direct effect, indirect effect,** and **total effect**.  
 
 ## Review  
 

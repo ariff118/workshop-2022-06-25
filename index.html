@@ -468,10 +468,27 @@ Conditional process analysis is a modeling strategy undertaken with the goal of<
 <section id="moderation-vs-mediation-analysis" class="slide level2">
 <h2>Moderation vs Mediation Analysis<br>
 </h2>
-<p><strong>Moderator Variable</strong><br>
-</p>
+<p>Key differences from a deterministic point of view:</p>
+<div class="fragment fade-in">
+<p>A mediator is <strong><em>the reason for the effect</em></strong> and acts like a “<code>middleman</code>” in the relationship between independent and dependent variables. If the mediator variable is removed, the causal link between independent and dependent variables disappears.</p>
+</div>
+<div class="fragment fade-in">
+<p>A mediator variable <strong>MUST</strong> be a causal result of the independent variable and a causal precursor of the dependent variable. In other words, <strong><em>a mediator contextualizes the effect</em></strong>.</p>
+</div>
+<div class="fragment fade-in">
+<p>A moderator variable <code>changes</code> the effect (<code>level of strength</code>, <code>direction</code>) between the independent and dependent variables.</p>
+</div>
+<div class="fragment fade-in">
+<p>A moderator variable <strong>MUST NOT</strong> be the causal effect of the independent variable.</p>
+</div>
+</section>
+<section id="moderating-variable" class="slide level2">
+<h2>Moderating Variable</h2>
+<div class="fragment fade-in">
 <p>A moderator specifies the <code>conditions under which a given effect occurs</code>, as well as the conditions under which the <code>direction (nature)</code> or <code>strength</code> of an effect vary.<br>
 </p>
+</div>
+<div class="fragment fade-in">
 <p>Baron and Kenny (1986, pp.&nbsp;1174, 1178) describe a moderator variable as the following:<br>
 </p>
 <div class="callout callout-none no-icon callout-style-simple">
@@ -489,16 +506,15 @@ Conditional process analysis is a modeling strategy undertaken with the goal of<
 </div>
 </div>
 </div>
-</section>
-<section id="section-1" class="slide level2">
-<h2><br>
-</h2>
-<p><strong>Moderator Variable (cont.)</strong><br>
-</p>
+</div>
+<div class="fragment fade-in">
 <p>A <code>moderator</code> variable is one that <code>affects the relationship between two variables</code>, so that the nature of the impact of the predictor on the criterion varies according to the level or value of the moderator <strong>(Holmbeck, 1997)</strong><br>
 </p>
+</div>
+<div class="fragment fade-in">
 <p>A moderator <code>interacts with the predictor</code> variable in such a way as to have an impact on the level of the dependent<br>
 </p>
+</div>
 <!-- ## \ -->
 <!-- **Issues in Moderation**\ -->
 <!-- ::: callout -->
@@ -512,7 +528,50 @@ Conditional process analysis is a modeling strategy undertaken with the goal of<
 <!-- variable.\ -->
 <!-- ::: -->
 </section>
-<section id="section-2" class="slide level2">
+<section id="various-interaction-pattern" class="slide level2">
+<h2>Various Interaction Pattern</h2>
+<div class="fragment fade-up">
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>The Fan Effect</strong><br>
+“Catastrophizing functioned as an exacerbator for the positive relationship noted between reported stress intensity and reported depression. The highest level of depressive symptoms occurred in individuals who reported high stress intensity and high levels of catastrophizing.”</p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/fan_effect.png"></p>
+</div>
+</div>
+</div>
+<div class="fragment fade-up">
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>The Triangle Pattern</strong><br>
+“The process of savoring exacerbates the relationship between the experience of positive events and the outcome of happiness. An individual who savors very little does not show any significant relationship between positive events and happiness, but someone who savors a lot shows a strong positive relationship. The greatest happiness is reported by those participants who reported experiencing high levels of positive events and also reported savoring to a high degree.”</p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/triangle_effect.png"></p>
+</div>
+</div>
+</div>
+<div class="fragment fade-up">
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>The Funnel Pattern</strong><br>
+“Academic achievement by adolescents varies by degree of challenge in the academic environment moderated by the amount of parental warmth. The degree of academic challenge is unrelated to academic achievement under conditions of average parental warmth. In contrast, a positive relationship between academic challenge and academic achievement was noted under conditions of high parental warmth, but a negative relationship was noted under conditions of low parental warmth. The highest academic achievement scores were found for adolescents in high challenge environments who had warm parents, whereas the lowest academic achievement scores were obtained for adolescents in high challenge environments who had parents lacking in warmth.”</p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/funnel_effect.png"></p>
+</div>
+</div>
+</div>
+<div class="fragment fade-up">
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>The Crossover Pattern (Butterfly)</strong><br>
+“No main effect for manipulated power nor a main effect for manipulated similarity were noted on ratings of liking, but a significant interaction was obtained. Under conditions of average manipulated similarity, no relationship was noted between manipulated power and liking. However, under conditions of high manipulated similarity, a positive relationship was found between manipulated power and liking. The opposite trend was seen under conditions of low manipulated similarity.”</p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/crossover_effect.png"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-1" class="slide level2">
 <h2><br>
 </h2>
 <div class="columns">
@@ -707,8 +766,8 @@ Using the SPSS syntax<br>
 <section id="reporting-results" class="slide level2">
 <h2>Reporting Results</h2>
 <ol type="1">
-<li><p>The study assessed the moderating role of <code>Grit</code> on the relationship between <code>Negative Life Events</code> and <code>Hope</code>. The results revealed a positive and significant moderating impact of <code>Grit</code> on the relationship between <code>Negative Life Events</code> and <code>Hpoe</code> (b = 2.6055, t = 2.4792, p = .0136), supporting H1. Moderation analysis summary is presented in Table 1.</p></li>
-<li><p>Results of simple slope analysis conducted to better understand the nature of the moderating effects are shown in Figure 1. As can be seen in Figure 1, the line is much steeper for Low RA. This shows that at Low <code>Grit</code>, the impact of <code>NLE</code> on <code>Hope</code> is much stronger in comparison to High <code>Grit</code>. As shown in Figure 2, as the level of <code>Grit</code> increased, the strength of the relationship between <code>NLE</code> and <code>Hope</code> decreased. This is due to the negative slope coefficient obtained.</p></li>
+<li><p>The study assessed the moderating role of <code>Grit</code> on the relationship between <code>Negative Life Events</code> and <code>Hope</code>. The results revealed a positive and significant moderating impact of <code>Grit</code> on the relationship between <code>Negative Life Events</code> and <code>Hope</code> (b = 2.6055, t = 2.4792, p = .0136), supporting H1. Moderation analysis summary is presented in Table 1.</p></li>
+<li><p>Results of simple slope analysis conducted to better understand the nature of the moderating effects are shown in Figure 1. As can be seen in Figure 1, the line is much steeper for Low <code>Grit</code>. This shows that at Low <code>Grit</code>, the impact of <code>NLE</code> on <code>Hope</code> is much stronger in comparison to High <code>Grit</code>. Also shown in the figure, as the level of <code>Grit</code> increased, the strength of the relationship between <code>NLE</code> and <code>Hope</code> increased. This is due to the positive slope coefficient obtained and the negative impact of <code>NLE</code> and <code>Hope</code>.</p></li>
 </ol>
 </section>
 <section id="module-2" class="slide level2">
@@ -920,7 +979,7 @@ Model 1 assumes that:<br>
 <p>Up to this point, we have focused on how to perform moderation analysis using the Process Macro.</p>
 <p>Let’s now examine how the influence between two constructs may take an indirect path through a third variable called a <strong>mediator</strong>.</p>
 <p>In this situation, the third variable will intervene on the influence of the two constructs.</p>
-<p>In testing if “mediation” or the presence of a mediator in a model, you need to understand some of the terminology that is used, such as <strong>direct effect, indirect effect,</strong> and **total effect”.</p>
+<p>In testing if “mediation” or the presence of a mediator in a model, you need to understand some of the terminology that is used, such as <strong>direct effect, indirect effect,</strong> and <strong>total effect</strong>.</p>
 </section>
 <section id="review" class="slide level2">
 <h2>Review</h2>
